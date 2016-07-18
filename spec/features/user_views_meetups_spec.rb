@@ -39,7 +39,6 @@ feature "user sees a list of meetups" do
     sign_in
 
     click_link "Ein Bier Bitte"
-    save_and_open_page
 
     expect(page).to have_current_path(meetup_path(einBierBitte))
   end

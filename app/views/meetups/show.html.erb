@@ -39,8 +39,10 @@
     <div class="small-12 columns">
       <div class="callout" data-equalizer-watch>
         <h4>Location</h4>
+        <h5><%= @meetup.location_name %></h5>
         <p><%= @meetup.address %>
         <%= @meetup.city %>, <%= @meetup.state %> <%= @meetup.zip %></p>
+        <p><%= @meetup.date %> - <%= @meetup.time %></p>
       </div>
       <div class="callout" data-equalizer-watch>
         <h4>Attendees</h4>
