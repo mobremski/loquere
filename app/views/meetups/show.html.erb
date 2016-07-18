@@ -1,0 +1,65 @@
+<div class="<%=@meetup.language%>">
+</div>
+<div class="row">
+  <div class="meetup-info small-12 medium-7 columns meetup-info">
+    <div class="row small-12 medium-12 columns">
+      <h1><%= @meetup.name %></h1>
+      <p><%= @meetup.description %></p>
+    </div>
+
+    <div class="row small-12 medium-12 columns language">
+      <h5><%= @meetup.language %></h5>
+    </div>
+
+    <div class="row small-12 medium-6 columns">
+      <div>
+        <% if user_signed_in? && (current_user.id == @meetup.user_id) %>
+          <%= link_to 'Delete', meetup_path(@meetup), action: 'destroy', method: :delete %> /
+          <%= link_to 'Edit', edit_meetup_path %> /
+        <% end %>
+        <%= link_to 'All Meetups', meetups_path %>
+      </div>
+      <div class="join-button">
+        <% if user_signed_in? && @membership_current %>
+          <div>
+            <%= form_for [@meetup, @membership_current], method: :delete do |f| %>
+              <%= f.submit "Leave", {class: "button join"} %>
+            <% end %>
+          </div>
+        <% else %>
+          <div>
+            <%= form_for [@meetup, @membership] do |f| %>
+              <%= f.submit "Join", {class: "button join"} %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="small-12 columns">
+      <div class="callout" data-equalizer-watch>
+        <h4>Location</h4>
+        <p><%= @meetup.address %>
+        <%= @meetup.city %>, <%= @meetup.state %> <%= @meetup.zip %></p>
+      </div>
+      <div class="callout" data-equalizer-watch>
+        <h4>Attendees</h4>
+        <ul>
+          <% @users.each do |user| %>
+            <li><%= user.first_name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="map small-12 medium-4 columns">
+    <iframe
+      width="375"
+      height="375"
+      zoom="10"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>&zoom=16&q=<%= @meetup.address %>, <%= @meetup.zip %>"
+    </iframe>
+  </div>
+</div>

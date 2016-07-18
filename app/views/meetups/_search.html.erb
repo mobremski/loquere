@@ -1,0 +1,10 @@
+<div class="row search-bar">
+  <%= form_tag meetups_path, method: :get do %>
+    <div class="search-field">
+      <%= text_field_tag :query %>
+    </div>
+    <div class="search-button">
+      <%= submit_tag "Search", { class: "button button-search" } %>
+    </div>
+  <% end %>
+</div>
