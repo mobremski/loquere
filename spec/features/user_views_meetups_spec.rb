@@ -29,7 +29,7 @@ feature "user sees a list of meetups" do
     expect(page).to have_link einBierBitte.name
     expect(page).to have_link nousParlons.name
 
-    first(:link, "Add New Meetup").click
+    first(:link, "Add a Meetup").click
 
     expect(page).to have_content "Add a Meetup"
   end
