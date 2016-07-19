@@ -12,6 +12,8 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 require 'coveralls'
+require 'rails_helper'
+require "factory_girl_rails"
 Coveralls.wear!('rails')
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
@@ -100,7 +102,7 @@ RSpec.configure do |config|
 =end
 end
 def sign_in
-  visit meetups_path
+  visit root_path
   click_link "Sign In"
   fill_in "Email", with: user.email
   fill_in "Password", with: user.password
