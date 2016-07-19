@@ -11,18 +11,22 @@ gem 'devise'
 gem 'pg_search'
 gem 'dotenv-rails'
 
+
 group :development, :test do
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', require: false
   gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
   gem 'shoulda'
   gem 'valid_attribute'
+  gem 'shoulda-matchers', require: false
+  gem 'capybara-webkit'
 end
 
 group :test do
   gem 'launchy', require: false
   gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 
 group :production do

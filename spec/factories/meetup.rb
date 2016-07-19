@@ -9,6 +9,6 @@ FactoryGirl.define do
     description "Come join us for a night of drink and German"
     language "German"
     date "January 13, 2017"
-    time "8pm"
+    time "9pm"
   end
 end
