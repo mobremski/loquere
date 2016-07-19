@@ -37,6 +37,7 @@ feature "user edits a meetup" do
     visit edit_meetup_path(meetup)
 
     fill_in "Name", with: ""
+    fill_in "Location Name", with: ""
     fill_in "Address", with: ""
     fill_in "City", with: ""
     fill_in "State", with: ""
@@ -52,6 +53,7 @@ feature "user edits a meetup" do
     expect(current_path).to eq(meetup_path(meetup))
 
     expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("Location name can't be blank")
     expect(page).to have_content("Address can't be blank")
     expect(page).to have_content("City can't be blank")
     expect(page).to have_content("State can't be blank")
