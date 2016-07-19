@@ -25,8 +25,10 @@ class MeetupsController < ApplicationController
     @meetup = Meetup.find(params[:id])
     @membership = Membership.new
     @users = @meetup.users
-    @membership_current_array = Membership.where(user_id: current_user.id).where(meetup_id: params[:id])
-    @membership_current = @membership_current_array[0]
+    if current_user
+      @membership_current_array = Membership.where(user_id: current_user.id).where(meetup_id: params[:id])
+      @membership_current = @membership_current_array[0]
+    end
   end
 
   def edit
