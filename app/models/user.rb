@@ -14,5 +14,7 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :screen_name, presence: true
+  validates :language, presence: true
+  validates :location, presence: true
   validates :encrypted_password, presence: true
 end

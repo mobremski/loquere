@@ -12,7 +12,6 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 require 'coveralls'
-require 'rails_helper'
 require "factory_girl_rails"
 Coveralls.wear!('rails')
 #
