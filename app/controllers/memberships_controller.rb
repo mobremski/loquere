@@ -10,7 +10,7 @@ class MembershipsController < ApplicationController
     @membership = Membership.new(
       meetup_id: params[:meetup_id],
       user_id: current_user.id
-      )
+    )
     @membership.save
     redirect_to meetup_path(@meetup)
   end
