@@ -7,6 +7,10 @@ require 'spec_helper'
 require 'rspec/rails'
 require "capybara/rails"
 require "valid_attribute"
+require "capybara/webkit"
+require 'capybara/webkit/matchers'
+require "database_cleaner"
+Capybara.javascript_driver = :webkit
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -32,10 +36,30 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
+    # Maybe selenium_firefox webdriver only works for Travis-CI builds.
+    # 2016-03-06: Phantomjs, all options fails on MacOs
+    # Same for webkit
+
+
+
+
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
+
+  config.before :each do
+    if Capybara.current_driver == :rack_test
+      DatabaseCleaner.strategy = :transaction
+    else
+      DatabaseCleaner.strategy = :truncation
+    end
+    DatabaseCleaner.start
+  end
+
+  config.after do
+    DatabaseCleaner.clean
+  end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and

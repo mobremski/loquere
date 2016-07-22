@@ -13,3 +13,6 @@
 /tmp
 .env
 /coverage
+/node_modules
+
+/react/coverage

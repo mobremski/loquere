@@ -21,6 +21,7 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
   gem 'capybara-webkit'
+  gem 'database_cleaner'
 end
 
 group :test do
