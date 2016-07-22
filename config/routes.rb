@@ -20,5 +20,4 @@ Rails.application.routes.draw do
       root 'landings#index', as: :unauthenticated_root
     end
   end
-
 end
