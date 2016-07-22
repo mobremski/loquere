@@ -12,19 +12,14 @@ feature "user sees a list of meetups" do
   end
 
   scenario "user visits root path and sees list of meetups" do
-    visit meetups_path
+    sign_in
 
     expect(page).to have_content(einBierBitte.name)
     expect(page).to have_content(nousParlons.name)
   end
 
   scenario "user signs in and sees a button to add meetups" do
-    visit meetups_path
-
-    click_link "Sign In"
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Log in"
+    sign_in
 
     expect(page).to have_link einBierBitte.name
     expect(page).to have_link nousParlons.name
@@ -35,7 +30,6 @@ feature "user sees a list of meetups" do
   end
 
   scenario "adds meetup and is redirected to that meetup's show page" do
-    visit meetups_path
     sign_in
 
     click_link "Ein Bier Bitte"

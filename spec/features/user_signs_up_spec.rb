@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'User signs up for an account' do
   scenario 'User fills in a valid form' do
-    visit meetups_path
+    visit unauthenticated_root_path
     click_link 'Sign Up'
 
     expect(current_path).to eq("/users/sign_up")
@@ -21,7 +21,7 @@ feature 'User signs up for an account' do
   end
 
   scenario 'required information not supplied' do
-    visit meetups_path
+    visit unauthenticated_root_path
     click_link 'Sign Up'
     click_button 'Sign up'
 
@@ -36,7 +36,7 @@ feature 'User signs up for an account' do
   end
 
   scenario 'password confirmation does not match password' do
-    visit root_path
+    visit unauthenticated_root_path
     click_link 'Sign Up'
     fill_in 'First name', with: 'Jon'
     fill_in 'Last name', with: 'Smith'
@@ -50,7 +50,7 @@ feature 'User signs up for an account' do
   end
 
   scenario 'password is too short' do
-    visit root_path
+    visit unauthenticated_root_path
     click_link 'Sign Up'
     fill_in 'First name', with: 'Jon'
     fill_in 'Last name', with: 'Smith'
