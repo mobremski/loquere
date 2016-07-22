@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 feature "users can add meetups" do
   let!(:user) { FactoryGirl.create(:user) }

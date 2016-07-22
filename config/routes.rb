@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   resources :meetups do
     resources :memberships
   end
+
+  namespace :api do
+    resources :meetups do
+      resources :memberships
+    end
+  end
 end

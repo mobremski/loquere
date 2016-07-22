@@ -30,6 +30,9 @@ class MeetupsController < ApplicationController
         user_id: current_user.id).where(meetup_id: params[:id])
       @membership_current = @membership_current_array[0]
     end
+    if @membership_current
+      @current_member = @membership_current.user_id
+    end
   end
 
   def edit
