@@ -6,17 +6,17 @@ class Api::MembershipsController < ApiController
   end
 
   def create
-
     meetup = Meetup.find(params[:meetup_id])
-    membership = Membership.new(meetup_id: params[:meetup_id], user_id: params[:user_id])
+    membership = Membership.new(meetup_id: params[:meetup_id],
+      user_id: params[:user_id])
     user = membership.user
     if membership.save
-      render json: { user: user, membership_current: membership.id }, status: :created
+      render json: { user: user, membership_current: membership.id },
+        status: :created
     else
       render json: { errors: user.errors }, status: :unprocessable_entity
     end
   end
-
 
   def destroy
     membership = Membership.find(params[:id])

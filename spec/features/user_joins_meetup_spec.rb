@@ -14,14 +14,13 @@ feature "User joins a meetup", js:true do
 
     click_link(meetup.name)
     expect(page).to have_button("Join")
-    save_and_open_page
+
     click_button "Join"
     expect(page).to have_content(user.screen_name)
     expect(page).to have_button("Leave")
   end
 
-  @javascript
-  scenario "User visits meetup's show page and clicks the leave button", js:true do
+  scenario "User visits show page and clicks the leave button", js: true do
     sign_in
     click_link(meetup.name)
 
