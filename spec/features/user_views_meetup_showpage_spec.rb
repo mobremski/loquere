@@ -12,13 +12,4 @@ feature "User navigates to meetup show page" do
 
     expect(page).to have_content(meetup.description)
   end
-
-  scenario "unauthenticated user views log in page" do
-    visit meetups_path
-
-    expect(page).to have_content(meetup.name)
-    click_link(meetup.name)
-
-    expect(page).to have_content("Sign In")
-  end
 end

@@ -18,7 +18,7 @@ feature "user deletes a meetup" do
   scenario "user unsuccessfully deletes another user's meetup" do
     user2 = FactoryGirl.create(:user)
 
-    visit meetups_path
+    visit unauthenticated_root_path
     click_link "Sign In"
     fill_in "Email", with: user2.email
     fill_in "Password", with: user2.password
