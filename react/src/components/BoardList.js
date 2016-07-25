@@ -101,7 +101,7 @@ class BoardList extends Component {
     });
     return(
       <div>
-        <h1> Messages </h1>
+        <h4> Messages </h4>
         <PostForm
           currentMember={this.state.current_member}
           currentUser={this.state.current_user}

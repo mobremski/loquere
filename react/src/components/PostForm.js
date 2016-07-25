@@ -10,7 +10,6 @@ class PostForm extends Component {
 
     return(
       <form onSubmit={this.props.handleFormSubmit}>
-        <label htmlFor="text">Leave a message</label>
         <input
           id="text"
           type="text"

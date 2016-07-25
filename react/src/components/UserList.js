@@ -95,7 +95,7 @@ class UserList extends Component {
 
     return(
       <div>
-          <h3>Members</h3>
+          <h4>Members</h4>
           {button}
           <ul>
           {userList}

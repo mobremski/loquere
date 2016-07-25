@@ -181,7 +181,7 @@ body {
 }
 
 .callout {
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .button {
@@ -206,8 +206,7 @@ body {
 }
 
 .when {
-  height: 138px;
-  margin-left: 30px;
+  height: 120px;
 }
 
 h1 {
@@ -222,14 +221,35 @@ h1 {
   margin-left: 20px;
 }
 
-.members {
-  margin-right: 20px;
-}
-
 .map {
   margin-left: 32px;
 }
 
 .posts {
-  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.posts h1 {
+  margin: 0;
+}
+
+.when-member {
+  margin-left: 28px;
+}
+
+.post {
+  list-style: none;
+}
+.screen-name {
+  text-align: right;
+}
+
+.name-language-flag {
+  margin-top: 80px;
+  width: 484.5px;
+}
+
+.description {
+  margin-top: 80px;
+  margin-right: 55px;
 }

@@ -12,10 +12,10 @@ const Post = props => {
     button = <button className="button" type="button" onClick={handleClick}>Delete</button>
   }
   return (
-    <li className="post">
+    <li className="post callout">
       <div>
-        <span>{props.body}</span>
-        <p>{props.user.screen_name}</p>
+        <p>{props.body}</p>
+        <p className="screen-name">-{props.user.screen_name}</p>
       </div>
       <div>
         {button}
