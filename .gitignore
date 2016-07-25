@@ -11,7 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
-
+.env
 /coverage
 /node_modules
 
