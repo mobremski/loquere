@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    resources :meetups do
+      resources :posts
+    end
+  end
+
   devise_scope :user do
     authenticated :user do
       root 'meetups#index', as: :authenticated_root

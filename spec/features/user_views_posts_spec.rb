@@ -1,0 +1,24 @@
+require 'rails_helper'
+
+feature "user sees a list of posts and adds to it" do
+  let!(:user) { FactoryGirl.create(:user) }
+  let!(:meetup) { FactoryGirl.create(:meetup, user_id: user.id) }
+  let!(:post) { FactoryGirl.create(:post, meetup_id: meetup.id, user_id: user.id)}
+
+  scenario "user visits meetup's showpage and sees a list of posts", js: true do
+    sign_in
+    click_link(meetup.name)
+
+    expect(page).to have_content(post.body)
+  end
+
+  scenario "user successfully submits a post", js: true do
+    sign_in
+    click_link(meetup.name)
+
+    fill_in 'text', with: post.body
+    click_button("Post")
+
+    expect(page).to have_content(post.body)
+  end
+end

@@ -1,11 +1,19 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserList from './components/UserList';
+import BoardList from './components/BoardList';
+import UserList from './components/UserList'
 
 $(function() {
   ReactDOM.render(
-    <UserList />,
+      <UserList />,
     document.getElementById('app')
+  );
+});
+
+$(function() {
+  ReactDOM.render(
+      <BoardList />,
+    document.getElementById('board')
   );
 });
