@@ -4,7 +4,7 @@ const User = props => {
 
   return(
     <div className="row">
-      <h4>{props.screen_name}</h4>
+      <h5>{props.screen_name}</h5>
     </div>
   );
 }

@@ -7,7 +7,8 @@ feature "user sees a list of posts and adds to it" do
     FactoryGirl.create(
       :post,
       meetup_id: meetup.id,
-      user_id: user.id)
+      user_id: user.id,
+      body: "test")
   end
 
   scenario "user visits showpage and sees a list of posts", js: true do
