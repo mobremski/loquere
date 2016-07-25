@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   has_many :meetups, through: :memberships
   has_many :meetups, dependent: :destroy
 
+  has_many :posts
+  has_many :meetups, through: :posts
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
