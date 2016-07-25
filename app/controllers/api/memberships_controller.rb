@@ -24,5 +24,4 @@ class Api::MembershipsController < ApiController
     membership.destroy
     render json: { user: user.id }
   end
-
 end

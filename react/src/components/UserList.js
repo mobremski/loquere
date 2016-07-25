@@ -46,13 +46,10 @@ class UserList extends Component {
       data: newMembership
     })
     .done(data => {
-      debugger;
       let newUsers = [...this.state.users, data["user"]];
       this.setState({
       users: newUsers,
       membership_current: data["membership_current"]
-      // current_user: data["current_user"],
-      // current_member: data["current_member"]
       })
     })
   }
@@ -72,7 +69,7 @@ class UserList extends Component {
           newUsers.push(userList.state.users[i]);
         }
       }
-      this.setState({ users: newUsers })
+      this.setState({ users: newUsers, current_member: null })
     });
   }
 
@@ -81,7 +78,6 @@ class UserList extends Component {
     let button;
     if (this.state.current_user) {
       if (this.state.joined) {
-        debugger;
         button = <button className="button" onClick={this.handleClickLeave}>Leave</button>
       } else {
         button = <button className="button" onClick={this.handleClickJoin}>Join</button>
