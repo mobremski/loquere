@@ -129,56 +129,7 @@ body {
   margin-top: 75px;
 }
 
-.French {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  position: fixed;
-  background-image: url("french.png");
-  min-width: 100%;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.2;
-  z-index: -1;
-}
 
-.Spanish {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  position: fixed;
-  background-image: url("spanish.jpg");
-  min-width: 100%;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.2;
-  z-index: -1;
-}
-
-.German {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  position: fixed;
-  background-image: url("german.png");
-  min-width: 100%;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.2;
-  z-index: -1;
-}
 
 .callout {
   opacity: 0.75;
@@ -186,23 +137,6 @@ body {
 
 .button {
   background-color: #676D73;
-}
-
-.index-wall {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  position: fixed;
-  background-image: url("wall.jpeg");
-  min-width: 100%;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.2;
-  z-index: -1;
 }
 
 .when {
