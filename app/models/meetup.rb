@@ -6,7 +6,7 @@ class Meetup < ActiveRecord::Base
   belongs_to :user
 
   has_many :posts
-  has_many :users, through: :posts
+  has_many :posters, through: :posts, source: :user
 
   validates :name, presence: true
   validates :location_name, presence: true

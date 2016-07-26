@@ -1,8 +1,11 @@
 class Api::MembershipsController < ApiController
   def index
+
     meetup = Meetup.find(params[:meetup_id])
     users = meetup.users
+
     render json: { users: users }, status: :ok
+
   end
 
   def create
