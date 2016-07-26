@@ -10,7 +10,7 @@
 
 
   <div class="show-header row">
-    <div class="name-language-flag callout small-12 medium-5 columns">
+    <div class="name-language-flag callout small-6 medium-5 columns">
       <h1><%= @meetup.name %></h1>
         <%= image_tag(@meetup.flag, class: "flag") %>
         <p><%= @meetup.language %></p>
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="description small-6 columns">
+    <div class="description small-6 medium-5 columns">
       <p><%= @meetup.description %></p>
     </div>
   </div>
