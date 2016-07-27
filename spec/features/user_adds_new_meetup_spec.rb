@@ -6,8 +6,8 @@ feature "users can add meetups" do
   scenario "user adds new meetup successfully" do
     sign_in
 
-    expect(page).to have_content "Add a Meetup"
-    click_link "Add a Meetup"
+    expect(page).to have_content "Add an Event"
+    click_link "Add an Event"
 
     fill_in "Name", with: "Nous Parlons"
     fill_in "Location Name", with: "Jacob Wirth's"
@@ -33,7 +33,7 @@ feature "users can add meetups" do
 
   scenario "user does not provide proper information for a meetup" do
     sign_in
-    click_link "Add a Meetup"
+    click_link "Add an Event"
 
     click_button "Create Meetup"
     expect(page).to have_content "Name can't be blank"

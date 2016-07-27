@@ -24,9 +24,9 @@ feature "user sees a list of meetups" do
     expect(page).to have_link einBierBitte.name
     expect(page).to have_link nousParlons.name
 
-    first(:link, "Add a Meetup").click
+    first(:link, "Add an Event").click
 
-    expect(page).to have_content "Add a Meetup"
+    expect(page).to have_content "Add an Event Location"
   end
 
   scenario "adds meetup and is redirected to that meetup's show page" do

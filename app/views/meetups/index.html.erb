@@ -1,3 +1,11 @@
+<div class="logo">
+  <div class="row">
+    <%= image_tag("Logo6.png") %>
+  </div>
+  <div class="row">
+      <%= link_to "Add an Event", new_meetup_path, { class: "button new-meetup" } %>
+  </div>
+</div>
 <div class="list small-8 columns">
   <% @meetups.each_with_index do |meetup, index| %>
     <div class="row">
