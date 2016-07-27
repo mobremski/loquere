@@ -13,6 +13,7 @@
 # it.
 require 'coveralls'
 require "factory_girl_rails"
+require 'support/controller_helpers'
 Coveralls.wear!('rails')
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
