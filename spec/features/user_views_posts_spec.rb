@@ -21,7 +21,7 @@ feature "user sees a list of posts and adds to it" do
   scenario "user successfully submits a post", js: true do
     sign_in
     click_link(meetup.name)
-    save_and_open_page
+
     fill_in "leave a message...", with: post.body
     click_button("Post")
 
