@@ -41,7 +41,6 @@ class BoardList extends Component {
 
   handleFormSubmit (event) {
     event.preventDefault();
-    debugger;
     let newPost = JSON.stringify({
       post: {
        body: this.state.body,

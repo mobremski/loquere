@@ -10,6 +10,7 @@ require 'valid_attribute'
 require 'capybara/webkit'
 require 'capybara/webkit/matchers'
 require 'database_cleaner'
+require 'capybara/poltergeist'
 Capybara.javascript_driver = :webkit
 # Add additional requires below this line. Rails is not loaded until this point!
 

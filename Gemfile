@@ -10,6 +10,7 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'pg_search'
 gem 'dotenv-rails'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 
 group :development, :test do
@@ -29,6 +30,7 @@ group :test do
   gem 'launchy', require: false
   gem 'coveralls', require: false
   gem 'database_cleaner'
+  gem 'poltergeist'
 end
 
 group :production do
