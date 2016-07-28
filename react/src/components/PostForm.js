@@ -7,15 +7,15 @@ class PostForm extends Component {
 
   render() {
 
-
     return(
       <form onSubmit={this.props.handleFormSubmit}>
         <input
           id="text"
           type="text"
+          value={this.props.name}
           placeholder="leave a message..."
-          value={this.props.body}
-          onChange={this.props.handleChange}/>
+          onChange={this.props.handleChange}
+        />
         <input type="submit" className="button" value="Post" />
       </form>
     );

@@ -107,7 +107,6 @@ class BoardList extends Component {
             currentUser={this.state.current_user}
             handleFormSubmit={this.handleFormSubmit}
             handleChange={this.handleChange}
-            body={this.state.body}
           />
         </div>
         <div className="post-list">
