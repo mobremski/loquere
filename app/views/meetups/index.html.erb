@@ -12,8 +12,8 @@
       <div class="small-12 columns">
         <div class="callout">
           <h3><%= link_to meetup.name, meetup_path(meetup), {class: "meetup-name"} %></h3>
-          <h5><%= meetup.language %></h5>
           <%= image_tag(meetup.flag, class: "flag") %>
+          <h6><%= meetup.language %></h6>
           <p><%= meetup.time %> <%= meetup.date %> </p>
           <p><%= meetup.city %>, <%= meetup.state %></p>
         </div>
