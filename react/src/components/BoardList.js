@@ -100,15 +100,19 @@ class BoardList extends Component {
     });
     return(
       <div>
-        <h4> Messages </h4>
-        <PostForm
-          currentMember={this.state.current_member}
-          currentUser={this.state.current_user}
-          handleFormSubmit={this.handleFormSubmit}
-          handleChange={this.handleChange}
-          body={this.state.body}
-         />
-        {postList}
+        <div className="post-form-header">
+          <h4> Messages </h4>
+          <PostForm
+            currentMember={this.state.current_member}
+            currentUser={this.state.current_user}
+            handleFormSubmit={this.handleFormSubmit}
+            handleChange={this.handleChange}
+            body={this.state.body}
+          />
+        </div>
+        <div className="post-list">
+          {postList}
+        </div>
       </div>
     );
   };
