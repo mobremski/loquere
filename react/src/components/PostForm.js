@@ -12,7 +12,7 @@ class PostForm extends Component {
         <input
           id="text"
           type="text"
-          value={this.props.name}
+          value={this.props.body}
           placeholder="leave a message..."
           onChange={this.props.handleChange}
         />
