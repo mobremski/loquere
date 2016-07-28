@@ -60,7 +60,8 @@ class BoardList extends Component {
       post.user = data["user"]
       let newPosts = [...this.state.posts, post];
       this.setState({
-      posts: newPosts
+      posts: newPosts,
+      body: ""
       })
     })
   }
