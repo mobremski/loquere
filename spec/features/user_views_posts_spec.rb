@@ -17,14 +17,4 @@ feature "user sees a list of posts and adds to it" do
 
     expect(page).to have_content(post.body)
   end
-
-  scenario "user successfully submits a post", js: true do
-    sign_in
-    click_link(meetup.name)
-
-    fill_in "text", with: post.body
-    click_button("Post")
-
-    expect(page).to have_content(post.body)
-  end
 end

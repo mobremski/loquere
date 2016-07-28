@@ -95,11 +95,15 @@ class UserList extends Component {
 
     return(
       <div>
+        <div className="members-list-header-button">
           <h4>Members</h4>
           {button}
+        </div>
+        <div className="members-list">
           <ul>
-          {userList}
+            {userList}
           </ul>
+        </div>
       </div>
     );
   };
