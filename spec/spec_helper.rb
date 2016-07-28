@@ -102,7 +102,7 @@ RSpec.configure do |config|
 =end
 end
 def sign_in
-  visit unauthenticated_root_path
+  visit landings_path
   click_link "Sign In"
   fill_in "Email", with: user.email
   fill_in "Password", with: user.password
